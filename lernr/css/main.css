@@ -1,0 +1,1276 @@
+/*! HTML5 Boilerplate v5.2.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/*
+ * Remove bootstrap styles.
+ */
+
+input, textarea {
+    border-radius: 1px !important;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Lernr custom styles
+   ========================================================================== */
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@font-face {
+    font-family: 'Montserrat';
+    src: url('montserrat-light-webfont.eot');
+    src: url('../fonts/montserrat-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/montserrat-light-webfont.woff2') format('woff2'),
+         url('../fonts/montserrat-light-webfont.woff') format('woff'),
+         url('../fonts/montserrat-light-webfont.ttf') format('truetype'),
+         url('../fonts/montserrat-light-webfont.svg#montserratlight') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+html, body {
+	font-family: 'Montserrat', sans-serif;
+	width: 100%;
+	overflow-x: hidden;
+}
+/* Works panel */
+.works {
+	background: #fb5d51;
+	overflow: hidden;
+	position: absolute;
+	width: 100%;
+	opacity: 0;
+}
+.works.open {
+	visibility: visible;
+	height: auto;
+}
+.works img {
+	margin-top: 120px;
+	margin-bottom: 30px;
+}
+.works .para {
+	margin-bottom: 90px;
+}
+.works .container {
+	position: relative;
+}
+.works .close {
+	position: absolute;
+	right: 15px;
+	top: 30px;
+	color: #FFF;
+	font-size: 24px;
+	z-index: 100;
+}
+/* Main navigation */
+.navbar {
+	margin-bottom: 0px;
+	padding: 12px 0 6px;
+}
+.navbar .navbar-brand {
+	padding: 11px 15px;
+	height: 70px;
+}
+.navbar .navbar-toggle .icon-bar {
+	background: #CCC;
+	position: relative;
+	width: 30px;
+	height: 3px;
+	transition: all 300ms ease-in-out;
+}
+.navbar .navbar-toggle.collapsed .top-bar {
+	transform: rotate(0deg);
+	top: -3px;
+}
+.navbar .navbar-toggle.collapsed .middle-bar {
+	background-color: #CCC;
+}
+.navbar .navbar-toggle.collapsed .bottom-bar {
+	transform: rotate(0deg);
+	top: 3px;
+}
+.navbar .navbar-toggle .top-bar {
+	transform: rotate(45deg);
+	top: 7px;
+}
+.navbar .navbar-toggle .middle-bar {
+	background-color: transparent;
+}
+.navbar .navbar-toggle .bottom-bar {
+	transform: rotate(-45deg);
+	top: -7px;
+}
+.navbar .navbar-header button {
+	margin-top: 14px;
+}
+.navbar ul li a {
+	text-transform: uppercase;
+	font-size: 14px;
+	padding: 21px;
+	color: #333;
+}
+.navbar ul .active a {
+	color: #fb5d51;
+	cursor: default;
+}
+.navbar ul li a:hover, .nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+	background: none !important;
+	color: #fb5d51;
+}
+.navbar ul li .login {
+	border: 1px solid #333;
+}
+.navbar ul li .login:hover {
+	border-color: #fb5d51 !important;
+}
+.navbar input {
+	text-transform: uppercase;
+	height: 48px;
+	padding-left: 48px;
+	font-size: 13px;
+}
+.navbar form {
+	position: relative;
+}
+.navbar .dropdown-menu a {
+	color: #333;
+	padding: 9px 15px;
+}
+.navbar .dropdown-menu .dropdown-title {
+	color: #fb5d51;
+	padding-top: 15px;
+}
+.navbar form .fa-search {
+	position: absolute;
+	font-size: 21px;
+	left: 30px;
+	top: 12px;
+	color: #CCC;
+}
+.navbar-home {
+	position: absolute;
+	width: 100%;
+	z-index: 100;
+}
+.navbar-home ul li a {
+	color: #FFF;
+}
+.navbar-home.navbar ul li .login {
+	border-color: #FFF;
+}
+.navbar-home form {
+	display: none !important;
+}
+/* Hero banner */
+.hero, .testimonial {
+	background-size: cover !important;
+}
+.hero.home-page {
+	background: url(../img/bg-home.jpg) no-repeat top center;
+}
+.hero.contact-page {
+	background: url(../img/bg-refer-teacher.jpg) no-repeat top center;
+}
+.hero.about-page {
+	background: url(../img/bg-about.jpg) no-repeat top center;
+}
+.hero.browse-page {
+	background: url(../img/bg-browse.jpg) no-repeat top center;
+}
+.hero .hero-content {
+	padding: 240px 0;
+}
+.hero .hero-content h1 {
+	text-transform: uppercase;
+	font-size: 36px;
+	margin-bottom: 24px;
+}
+.hero .hero-content p {
+	font-size: 21px;
+	font-weight: 300;
+}
+.hero .hero-content form {
+	position: relative;
+}
+.hero .hero-content form .fa-search {
+	position: absolute;
+	left: 50%;
+	margin-left: -139px;
+	font-size: 17px;
+	top: 13px;
+}
+.hero .hero-content form input {
+	font-size: 18px;
+	max-width: 300px;
+	margin: 36px auto 0;
+	padding-left: 33px;
+	background: none;
+	height: 42px;
+	color: #FFF;
+	text-transform: uppercase;
+	font-size: 13px;
+}
+.hero h2 {
+	line-height: 240px;
+	color: #FFF;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+/* Breadcrumb */
+.breadcrumb {
+	background: none;
+}
+.breadcrumb > li + li:before {
+    content: "\f105";
+	font: normal normal normal 14px/1 FontAwesome;
+}
+.breadcrumb a, .breadcrumb li {
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 13px;
+	font-weight: 300;
+	color: #B4B4B4;
+}
+.breadcrumb a:hover {
+	 color: #555;
+}
+/* Second panel (featured professors) */
+.featured-prof {
+	padding-bottom: 36px;
+	padding-top: 36px;
+}
+.featured-prof .item {
+	position: relative;
+	padding: 0;
+}
+.featured-prof .item img {
+	width: 100%;
+	height: auto;
+}
+.featured-prof .black-box {
+	background: rgba(0,0,0,0.5);
+	position: absolute;
+	bottom: 24px;
+	padding: 0 24px;
+	color: #FFF;
+	max-width: 100%;
+}
+.featured-prof .black-box h3 {
+	text-transform: uppercase;
+	font-weight: 300;
+	font-size: 21px;
+	margin-bottom: 0;
+}
+.featured-prof .black-box p i {
+	font-size: 18px;
+	margin-right: 6px;
+}
+.featured-prof .black-box p {
+	font-weight: 300;
+}
+/* Third panel (popular courses) */
+.popular-courses {
+	padding: 60px 0;
+}
+.popular-courses .item div img {
+	width: 100%;
+	height: auto;
+}
+.popular-courses .carousel {
+	margin-bottom: 60px;
+}
+.popular-courses .carousel-indicators {
+	bottom: -60px;
+}
+.popular-courses .carousel-indicators li {
+	background: #898989;
+}
+.subject-item {
+	position: relative;
+	border: 1px solid #bababa;
+}
+.subject-item .image-container {
+	height: 210px;
+	width: 100%;
+	display: block;
+	background-repeat: no-repeat;
+  	background-size: cover !important;
+	background-position: center center;
+	margin-bottom: 60px;
+}
+.subject-item .prof-container {
+	height: 84px;
+	width: 84px;
+	border-radius: 42px;
+	display: block;
+	background-repeat: no-repeat;
+  	background-size: cover !important;
+	background-position: center center;
+	position: absolute;
+	top: 165px;
+	left: 50%;
+	margin-left: -42px;
+}
+.subject-item .black-container {
+	background: rgba(0,0,0,0.66);
+	height: 12px;
+	width: 100%;
+	position: absolute;
+	top: 198px;
+}
+.subject-item .item-container {
+	margin-bottom: 12px;
+}
+.subject-item .item-container:last-child {
+	margin-bottom: 0;
+}
+.subject-item .item-container .name {
+	margin-bottom: 12px;
+	font-weight: 300;
+	font-size: 18px;
+}
+.subject-item .item-container .price {
+	font-size: 24px;
+	border-bottom: 1px solid #333;
+	padding-bottom: 9px;
+}
+.subject-item .item-container .price span {
+	font-size: 15px;
+	font-weight: 300;
+}
+.subject-item .item-container .about {
+	font-size: 13px;
+	font-weight: 300;
+	color: #8d8d8d;
+	padding-bottom: 12px;
+}
+.subject-item hr {
+	border-top: 1px solid #333;
+	height: 0;
+	margin: 12px 0;
+}
+.subject-item .item-container .topic {
+	text-transform: uppercase;
+	font-size: 14px;
+}
+.subject-item .item-container .topic span {
+	text-transform: none;
+	font-weight: 300;
+}
+.subject-item .detail {
+	font-size: 12px;
+	margin-bottom: 18px;
+	color: #bababa;
+	font-weight: 600;
+}
+.subject-item .detail i {
+	font-size: 15px;
+	margin-right: 6px;
+}
+.subject-item .reserve {
+	display: block;
+	text-align: center;
+	height: 48px;
+	line-height: 48px;
+	text-transform: uppercase;
+	background: #333;
+	font-weight: 700;
+	font-size: 12px;
+	color: #FFF;
+	text-decoration: none;
+}
+.subject-item .reserve:hover {
+	background: #fb5d51;
+	color: #FFF;
+}
+/* Testimonial */
+.testimonial {
+	background: url(../img/bg-testimonial.jpg) no-repeat top center;
+}
+.testimonial {
+	padding: 60px 0;
+}
+.testimonial .pic {
+	width: 120px;
+	height: 120px;
+	border-radius: 60px;
+	margin: 30px auto;
+	overflow: hidden;
+}
+.testimonial .pic img {
+	width: 100%;
+	height: auto;
+}
+.testimonial p {
+	line-height: 30px;
+	margin-bottom: 18px;
+}
+.testimonial p strong {
+	font-weight: 300;
+}
+/* FAQ */
+.faq {
+	padding: 60px 0;
+}
+.faq-q:before {
+	content: 'Q';
+	font-size: 210px;
+	font-weight: 300;
+	position: absolute;
+	left: 0px;
+	top: -96px;
+	color: #E8E8E8;
+}
+.faq .list-group-item {
+	border: none;
+	border-radius: 0;
+	background: #EBEBEB;
+}
+.faq a.list-group-item {
+	margin-top: 24px;
+}
+.faq p.list-group-item {
+	border-top: 1px solid #333;
+}
+.faq p {
+	font-weight: 300;
+}
+/* Nearby */
+.nearby {
+	padding: 60px 0 0;
+}
+.nearby .title {
+	margin-bottom: 60px;
+}
+.nearby figure, .contact figure {
+	height: 600px;
+	width: 100%;
+	overflow: hidden;
+}
+.nearby figure img, .contact figure img {
+	height: 100%;
+	width: auto;
+}
+/* 404 Page */
+.p404, .tyou {
+	padding: 120px 0 180px;
+}
+.p404 h1, .tyou h1 {
+	font-weight: 700;
+	font-size: 66px;
+	margin-bottom: 36px;
+	color: #fb5d51;
+}
+.p404 p, .tyou p {
+	font-weight: 300;
+	font-size: 18px;
+	margin-bottom: 48px;
+}
+.tyou a {
+	margin: 0 12px;
+	font-size: 24px;
+	color: #333;
+}
+.tyou a:hover {
+	color: #fb5d51;
+}
+/* About page */
+.vision {
+	padding: 60px 15px;
+	border-bottom: 1px solid #CCC;
+}
+.vision h1, .team h1 {
+	margin-bottom: 60px;
+}
+.vision p, .team p {
+	font-size: 17px;
+	font-weight: 300;
+	margin-top: 30px;
+}
+.team {
+	padding: 60px 15px;
+}
+.team figure {
+	min-width: 80%;
+	margin: 0 10%;
+	height: auto;
+	border-radius: 50%;
+	border: 3px solid #fb5d51;
+	overflow: hidden;
+}
+.team figure img {
+	width: 100%;
+	height: auto;
+}
+.team a {
+	margin-right: 12px;
+	font-size: 24px;
+	color: #333;
+}
+.team a:hover {
+	color: #fb5d51;
+}
+.team .row:not(:last-child) {
+	border-bottom: 1px solid #CCC;
+	padding-bottom: 60px;
+	margin-bottom: 60px;
+}
+/* Contact= page */
+.contact {
+	padding: 60px 15px;
+}
+.contact h3, .course-detail h3 {
+	text-transform: uppercase;
+	font-size: 18px;
+	font-weight: 700;
+	margin-bottom: 30px;
+}
+.contact p, .course-detail p {
+	font-weight: 300;
+	font-size: 16px;
+}
+.container .under-line {
+	border-bottom: 1px solid #CCC;
+}
+.contact .social {
+	display: inline-block;
+	height: 36px;
+	width: 36px;
+	border-radius: 18px;
+	text-align: center;
+	line-height: 36px;
+	color: #FFF;
+	margin-right: 18px;
+}
+.contact .facebook {
+	background: #4d66a3;
+}
+.contact .twitter {
+	background: #25a7df;
+}
+.contact .google {
+	background: #d64936;
+}
+.contact .linkedin {
+	background: #1571b1;
+}
+.contact figure {
+	height: 480px;
+}
+.contact .media .fa-envelope {
+	font-size: 18px;
+}
+.contact .media .fa-map-marker {
+	margin-left: 14px;
+}
+.contact .media i {
+	font-size: 21px;
+	color: #fb5d51;
+	margin: 0 12px;
+}
+.contact .media .media-heading {
+	text-transform: uppercase;
+	font-size: 15px;
+}
+/* Course Detail page */
+.course-detail {
+	padding: 60px 15px;
+}
+.course-detail .join-box, .course-detail .social-box, .course-detail .related-box {
+	border: 1px solid #CCC;
+}
+.course-detail .join-box h3 {
+	color: #FFF;
+	background: #fb5d51;
+	line-height: 60px;
+	margin: 0 -15px;
+}
+.course-detail .table {
+	font-weight: 300;
+	margin-top: 30px;
+}
+.course-detail .table i {
+	font-size: 18px;
+	padding: 0 3px;
+	width: 30px;
+	text-align: center;
+	color: #fb5d51;
+}
+.course-detail .table tr td {
+	line-height: 45px;
+}
+.course-detail .course .media figure {
+	width: 150px;
+	height: 150px;
+	border-radius: 90px;
+	overflow: hidden;
+}
+.course-detail .course h4 {
+	text-transform: uppercase;
+	font-weight: 700;
+	margin: 60px 0 30px;
+}
+.course-detail .course .media h4 {
+	text-transform: none;
+	margin: 0 0 15px;
+}
+.course-detail .social-box {
+	margin-top: 60px;
+	padding: 15px 15px 30px;
+}
+.course-detail .social-box a {
+	display: inline-block;
+	height: 36px;
+	width: 36px;
+	border-radius: 18px;
+	text-align: center;
+	line-height: 36px;
+	color: #FFF;
+	margin: 0 6px;
+}
+.course-detail .social-box h3 {
+	margin-bottom: 30px;
+}
+.course-detail .social-box .facebook {
+	background: #4d66a3;
+}
+.course-detail .social-box .twitter {
+	background: #25a7df;
+}
+.course-detail .social-box .google {
+	background: #d64936;
+}
+.course-detail .social-box .linkedin {
+	background: #1571b1;
+}
+.course-detail .social-box .mail {
+	background: #999999;
+}
+.course-detail .social-box .youtube {
+	background: #cd171e;
+}
+.course-detail .related-box {
+	margin-top: 60px;
+	padding: 15px 15px 30px;
+}
+.course-detail .related-box figure {
+	width: 108px
+}
+.course-detail .related-box .media-heading {
+	text-transform: uppercase;
+	font-size: 13px;
+}
+.course-detail .related-box p {
+	font-size: 13px;
+	margin: 6px 0;
+}
+/* Browse page */
+.browse {
+	padding: 60px 15px;
+}
+.browse .filter-box, .browse .promo-box {
+	border: 1px solid #CCC;
+}
+.browse .filter-box {
+	padding: 0 30px 30px;
+}
+.browse .filter-box h3 {
+	text-transform: uppercase;
+	font-size: 15px;
+	background: #333;
+	line-height: 60px;
+	color: #FFF;
+	margin: 0 -30px 54px;
+}
+.browse .filter-box .list-group-item {
+	text-transform: uppercase;
+	display: block;
+	font-size: 13px;
+	line-height: 30px;
+	border-radius: 0;
+	border: 1px solid #CCC;
+	border-left: none;
+	border-right: none;
+}
+.browse .filter-box .list-group-item i {
+	font-size: 12px;
+	margin-right: 6px;
+	color: #fb5d51;
+}
+.browse .promo-box {
+	margin-top: 60px;
+	padding: 18px 15px 30px;
+}
+.browse .browse-list .dropdown button {
+	margin-top: 0;
+}
+.browse .browse-list .dropdown-menu {
+	border-radius: 0;
+	text-transform: uppercase;
+	float: right;
+	left: auto;
+	right: 0;
+	color: #575757;
+}
+.browse .browse-list .item {
+	position: relative;
+	border: 1px solid #CCC;
+	margin: 0 0 30px;
+}
+.browse .browse-list .item .col-sm-6 {
+	padding-left: 0px;
+}
+.browse .browse-list .item figure {
+	width: 100%;
+}
+.browse .browse-list .item .prof-image {
+	position: absolute;
+	right: 36px;
+	top: 24px;
+	width: 72px;
+	height: 72px;
+	overflow: hidden;
+	border-radius: 36px;
+}
+.browse .browse-list .item .prof {
+	font-size: 18px;
+	font-weight: 300;
+	margin-top: 42px;
+	margin-bottom: 24px;
+}
+.browse .browse-list .item .price {
+	font-size: 18px;
+	font-weight: 700;
+	margin-top: 42px;
+	margin-bottom: 24px;
+}
+.browse .browse-list .item .price span, .browse .browse-list .item .topic span {
+	font-size: 12px;
+	font-weight: 300;
+}
+.browse .browse-list .item .detail {
+	color: #bababa;
+	line-height: 30px;
+}
+.browse .browse-list .item .detail i {
+	font-size: 18px;
+	width: 30px;
+	text-align: center;
+}
+.browse .browse-list .item .topic {
+	margin-bottom: 12px;
+}
+.browse .browse-list .item .desc {
+	font-weight: 300;
+}
+.browse .browse-list .item .book {
+	display: block;
+	background: rgba(0,0,0,0.33);
+	color: #FFF;
+	text-transform: uppercase;
+	font-weight: 700;
+	width: 150px;
+	text-align: center;
+	line-height: 42px;
+	position: absolute;
+	text-decoration: none;
+	right: 0px;
+	bottom: 0px;
+}
+.browse .browse-list .item .comment {
+	background: rgba(251,93,81,0.33);
+	color: #FFF;
+	right: 150px;
+}
+.browse .browse-list .item .book:hover {
+	background: rgba(0,0,0,0.66);
+}
+.browse .browse-list .item .comment:hover {
+	background: rgba(251,93,81,0.66);
+}
+/* Refer page */
+.refer {
+	padding: 60px 0;
+}
+.refer h3 {
+	text-transform: uppercase;
+	font-size: 30px;
+	font-weight: 700;
+}
+.refer p {
+	font-size: 18px;
+	font-weight: 300;
+}
+/* Footer */
+.footer {
+	background: #333;
+	border-top: 5px solid #fb5d51;
+}
+.footer .newsletter {
+	margin: 30px 0;
+}
+.footer h3 {
+	text-transform: uppercase;
+	font-size: 17px;
+	margin-bottom: 24px;
+}
+.footer p {
+	font-weight: 300;
+}
+.footer p i {
+	font-size: 18px;
+	margin-right: 12px;
+	width: 24px;
+	text-align: center;
+}
+.footer p .fa-envelope {
+	font-size: 15px;
+}
+.footer .logo {
+	margin-bottom: 24px;
+}
+.footer input, .footer textarea, .refer input, .modal input[type='text'] {
+	line-height: 24px;
+	height: 48px;
+	padding: 12px;
+	text-transform: uppercase;
+	margin-bottom: 24px;
+}
+.footer textarea {
+	height: 96px;
+}
+.footer .black p {
+	margin: 12px 0;
+}
+.footer .black a {
+	color: #666;
+	font-size: 18px;
+	line-height: 45px;
+	margin-left: 12px;
+}
+/* Modal */
+.modal .modal-content {
+	border-radius: 0;
+}
+.modal .modal-title {
+	text-transform: uppercase;
+	font-size: 15px;
+	font-weight: 700;
+	text-align: center;	
+}
+.modal .modal-body {
+	padding: 30px 0;
+}
+.modal form .checkbox label, .modal form a {
+	text-transform: uppercase;
+	font-size: 12px;
+}
+.modal form a {
+	line-height: 48px;
+	text-decoration: none;
+}
+.modal form .btn-pink {
+	width: 100%;
+	margin-top: 12px;
+}
+.modal .modal-footer {
+	padding-top: 21px;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.title {
+	font-size: 30px;
+	font-weight: 300;
+	color: #333;
+}
+.title-block {
+	text-transform: uppercase;
+	font-size: 30px;
+	font-weight: 700;
+	color: #333;
+}
+.sub-title {
+	margin-bottom: 60px;
+	color: #333;
+}
+.btn-pink {
+	background: #fb5d51;
+	color: #FFF;
+	border-radius: 0;
+	text-transform: uppercase;
+	text-decoration: none !important;
+	padding: 12px 24px;
+	margin-top: 24px;
+	border: 1px solid #fb5d51;
+	height: 45px;
+}
+.btn-pink:hover {
+	background: none;
+	color: #fb5d51;
+}
+.btn-pink.dark-grey {
+	border: 1px solid #7B7B7B;
+}
+.btn-pink.dark-grey:hover {
+	color: #7B7B7B;
+}
+.smooth {
+	-webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+}
+.black {
+	background: #000;
+}
+.light-grey {
+	background: #E9E9E9;
+}
+.dark-grey {
+	background: #7B7B7B;
+}
+.border-grey {
+	border: 1px solid #CCC;
+}
+.text-white {
+	color: #FFF;
+}
+.nopadding {
+	padding: 0;
+}
+.mb30 {
+	margin-bottom: 30px;
+}
+.mt30 {
+	margin-top: 30px;
+}
+.mt60 {
+	margin-top: 60px;
+}
+.pb30 {
+	padding-bottom: 30px;
+}
+figure img {
+	width: 100%;
+	height: auto;
+}
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media(max-width:1169px) {
+	.hidden-md {
+		display: none;
+	}
+}
+
+@media(max-width:991px) {
+	.navbar ul li a {
+		padding-left: 9px;
+		padding-right: 9px;
+	}
+}
+
+@media(max-width:767px) {
+	.xs-center {
+		text-align: center;
+	}
+	.navbar ul li a {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.navbar.navbar-home .open .dropdown-menu>li>a:not(.dropdown-title) {
+		color: #E8E8E8;
+	}
+	.navbar .navbar-collapse {
+		background: #FFF;
+	}
+	.navbar ul li .login {
+		border: 1px solid #333;
+		margin: 0 15px;
+	}
+	.navbar input {
+		margin-top: 12px;
+	}
+	.navbar form .fa-search {
+		top: 34px;
+	}
+	.navbar-home.navbar .navbar-collapse {
+		background: rgba(0,0,0,0.9);
+	}
+	.faq-q {
+		margin-bottom: 60px;
+	}
+	.browse .browse-list .item .col-sm-6 {
+		padding-right: 0px;
+	}
+	.browse .browse-list .item .cont {
+		padding: 0 15px 30px;
+	}
+	.browse .browse-list .dropdown button {
+		margin-top: 30px;
+	}
+	.refer form .row {
+		margin: 0;
+	}
+}
+
+@media(max-width:479px) {
+	
+}
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after,
+    *:first-letter,
+    *:first-line {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

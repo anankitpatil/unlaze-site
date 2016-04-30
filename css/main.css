@@ -1,0 +1,778 @@
+/*! HTML5 Boilerplate v5.2.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+ 
+@font-face {
+    font-family: 'blackregular';
+    src: url('../fonts/gotham-black-webfont.eot');
+    src: url('../fonts/gotham-black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/gotham-black-webfont.woff2') format('woff2'),
+         url('../fonts/gotham-black-webfont.woff') format('woff'),
+         url('../fonts/gotham-black-webfont.ttf') format('truetype'),
+         url('../fonts/gotham-black-webfont.svg#gotham_blackregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'bookregular';
+    src: url('../fonts/gotham-book-webfont.eot');
+    src: url('../fonts/gotham-book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/gotham-book-webfont.woff2') format('woff2'),
+         url('../fonts/gotham-book-webfont.woff') format('woff'),
+         url('../fonts/gotham-book-webfont.ttf') format('truetype'),
+         url('../fonts/gotham-book-webfont.svg#gotham_bookregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'extralightregular';
+    src: url('../fonts/gotham-extralight-webfont.eot');
+    src: url('../fonts/gotham-extralight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/gotham-extralight-webfont.woff2') format('woff2'),
+         url('../fonts/gotham-extralight-webfont.woff') format('woff'),
+         url('../fonts/gotham-extralight-webfont.ttf') format('truetype'),
+         url('../fonts/gotham-extralight-webfont.svg#gotham_extralightregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/*
+ * Custom global css
+ */
+ 
+figure {
+	margin: 0px;
+}
+figure img {
+	width: 100%;
+	height: auto;
+}
+.shadow {
+	-webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.15);
+	box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.15);
+}
+.nopadding {
+	padding: 0px;
+}
+h2 strong {
+	font-family: 'bookregular', sans-serif;
+	font-weight: normal;
+}
+ 
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+body {
+	font-family: 'bookregular', sans-serif;
+	letter-spacing: -1px;
+}
+
+.first {
+	background: url(../img/main-bg.jpg) no-repeat center top;
+	background-size: cover;
+	padding-top: 120px;
+	color: #FFF;
+	overflow: hidden;
+}
+.first h1 {
+	text-transform: uppercase;
+	font-family: 'blackregular', sans-serif;
+	font-size: 96px;
+	margin-top: 96px;
+}
+.first p {
+	font-family: 'extralightregular', sans-serif;
+	font-size: 48px;
+}
+.first .soon {
+	font-family: 'extralightregular', sans-serif;
+	font-size: 30px;
+	margin-top: 60px;
+}
+.first .soon i {
+	font-size: 36px;
+	margin: 9px 18px 0 0;
+}
+
+nav {
+	padding: 6px 0 3px;
+	border-radius: 0px !important;
+	width: 100%;
+}
+nav.clone {
+	transition: all 600ms ease-in-out;
+	position: fixed;
+	top: -61px;
+	background: #FFF;
+	z-index: 99999;
+}
+nav.clone.active {
+	top: 0px;
+}
+nav a {
+	color: #333;
+	font-family: 'bookregular', sans-serif;
+	margin-left: 24px;
+}
+.nav>li>a:hover, nav .navbar-brand:hover {
+	background-color: transparent;
+	color: #06bb9b;
+}
+nav .navbar-brand {
+	font-family: 'blackregular', sans-serif;
+	text-transform: uppercase;
+	font-size: 24px;
+}
+nav .navbar-toggle .icon-bar {
+	background: #CCC;
+	position: relative;
+	transition: all 600ms ease-in-out;
+}
+nav .navbar-toggle.collapsed .top-bar {
+	top: 0px;
+	transform: rotate(0deg);
+}
+nav .navbar-toggle.collapsed .middle-bar {
+	top: 2px;
+	background-color: #CCC;
+}
+nav .navbar-toggle.collapsed .bottom-bar {
+  	top: 4px;
+	transform: rotate(0deg);
+}
+nav .navbar-toggle .top-bar {
+	top: 10px;
+	transform: rotate(45deg);
+}
+nav .navbar-toggle .middle-bar {
+	background-color: transparent;
+}
+nav .navbar-toggle .bottom-bar {
+	top: -2px;
+	transform: rotate(-45deg);
+}
+nav .navbar-header button {
+	margin-top: 6px;
+}
+nav .early {
+	border-radius: 25px;
+	padding: 9px 14px 9px 15px !important;
+	margin-top: 4px;
+	border: 1px solid #06bb9b;
+	color: #FFF;
+	background: #06bb9b;
+}
+nav .early:hover {
+	color: #06bb9b;
+	background: none;
+}
+nav .early.mobile {
+	display: none;
+}
+
+.second {
+	padding-top: 150px;
+	padding-bottom: 150px;
+	background: url(../img/second-bg.jpg) no-repeat bottom right;
+	border-bottom: 3px solid #06bb9b;
+	overflow: hidden;
+}
+.second h2, .third h2, .fourth h2, .fifth h2, .sixth h2, .seventh h2, .eighth h2 {
+	text-transform: uppercase;
+	font-size: 36px;
+	font-family: 'extralightregular', sans-serif;
+}
+.second p, .fourth p, .fifth p, .sixth p, .seventh p, .eighth p, .footer p {
+	font-size: 18px;
+	margin-top: 24px;
+}
+
+.third {
+	padding-top: 90px;
+	overflow: hidden;
+}
+.third h2 {
+	font-size: 33px;
+}
+.third .third-face {
+	margin-top: 48px;
+}
+.third .carousel-control {
+	background: none;
+}
+.third .carousel-control img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -24px;
+	margin-top: -44px;
+	width: 48px;
+}
+.third .carousel-control.right img {
+	-webkit-transform: rotate(180deg);
+}
+.third .carousel-inner .item:nth-child(1) .col-xs-7 {
+	padding-top: 96px;
+}
+.third .carousel-inner .item:nth-child(2) .col-xs-7 {
+	padding-top: 96px;
+}
+.third .carousel-inner .item:nth-child(3) .col-xs-7 {
+	padding-top: 96px;
+}
+.third .carousel-indicators li {
+	border: 1px solid #ccc;
+}
+.third .carousel-indicators .active {
+	background-color: #ccc;
+}
+
+.fourth {
+	padding-top: 150px;
+	padding-bottom: 150px;
+	background: #f7f7f7;
+	overflow: hidden;
+}
+.fourth .reasons {
+	margin-top: 96px;
+}
+.fourth .reasons h4 {
+	text-transform: uppercase;
+	font-size: 300;
+	font-size: 24px;
+	margin-top: 18px;
+}
+.fourth .reasons p {
+	font-size: 17.5px;
+}
+.fourth .reasons .media-right img {
+	width: 48px;
+	margin: 0 0 0 24px;
+}
+.fourth .reasons .media-left img {
+	width: 48px;
+	margin: 0 24px 0 0;
+}
+
+.fifth {
+	padding-top: 150px;
+	padding-bottom: 150px;
+	overflow: hidden;
+}
+.fifth h2 {
+	margin-top: 96px;
+}
+
+.sixth {
+	padding-top: 60px;
+	padding-bottom: 60px;
+	overflow: hidden;
+}
+.sixth .blog {
+	padding-top: 60px;
+}
+.sixth .blog div {
+	padding-top: 60px;
+	padding-bottom: 60px;
+	border-top: 1px solid #CCC;
+}
+.sixth .blog a {
+	text-decoration: none;
+	color: #222;
+}
+.sixth .blog a:hover {
+	color: #06bb9b;
+}
+.sixth .blog a h3 {
+	font-family: 'blackregular', sans-serif;
+	font-size: 24px;
+}
+.sixth .blog .view-blog {
+	background: #e1e1e1;
+	text-transform: uppercase;
+	color: #333;
+	padding: 12px 24px;
+	border-radius: 20px;
+	text-decoration: none;
+	border: 1px solid #e1e1e1;
+}
+.sixth .blog .view-blog:hover {
+	background: none;
+}
+
+.seventh {
+	padding-top: 60px;
+	padding-bottom: 60px;
+	background: #f7f7f7;
+	overflow: hidden;
+}
+.seventh .fb-signup {
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	color: #CCC;
+	font-size: 24px;
+	width: 300px;
+	margin: 48px auto;
+}
+.seventh .fb-signup.complete {
+	text-transform: uppercase;
+	color: #06bb9b;
+	font-family: 'extralightregular';
+}
+.seventh .fb-signup img {
+	width: 100%;
+	height: auto;
+}
+
+.eighth {
+	padding-top: 60px;
+	padding-bottom: 60px;
+	overflow: hidden;
+}
+.eighth .social {
+	padding-top: 60px;
+}
+.eighth .social a {
+	color: #FFF;
+	display: inline-block;
+	text-align: center;
+	height: 75px;
+	width: 75px;
+	border-radius: 38px;
+	line-height: 96px;
+	margin: 0 12px;
+}
+
+.footer {
+	background: #333;
+	color: #FFF;
+	padding-top: 12px;
+	padding-bottom: 24px;
+}
+
+.scrollup {
+	position: fixed;
+	bottom: 48px;
+	right: 48px;
+	font-size: 36px;
+	color: #06bb9b;
+	cursor: pointer;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   Custom responsive styles
+   ========================================================================== */
+
+@media(max-width:1169px) {
+	.first h1 {
+		margin-top: 48px;
+	}
+	
+	.second {
+		background-size: 33.33333%;
+	}
+	
+	.third h2 {
+		font-size: 21px;
+	}
+
+	.fourth .reasons p {
+		font-size: 15px;
+	}
+	
+	.fifth h2 {
+		margin-top: 60px;
+	}
+}
+@media(max-width:991px) {
+	.first .soon {
+		margin-bottom: 24px;
+	}
+	
+	nav li a {
+		margin-left: 0px;
+	}
+	
+	.third .carousel-control img {
+		margin-left: -18px;
+		margin-top: -33px;
+		width: 36px;
+	}
+	
+	.fourth .reasons h4 {
+		font-size: 21px;
+	}
+	.fourth .reasons .col-sm-6:first-child {
+		padding-right: 36px;
+	}
+	.fourth .reasons .col-sm-6:last-child {
+		padding-left: 36px;
+	}
+	
+	.fifth h2 {
+		margin-top: 24px;
+	}
+}
+@media(max-width:767px) {
+	.first h1 {
+		font-size: 72px;
+		margin-top: 48px;
+	}
+	.first p {
+		font-size: 24px;
+	}
+	.first .soon {
+		font-size: 18px;
+	}
+	
+	nav .early {
+		/*width: 137px;
+		margin: 9px auto 0px;*/
+		display: none !important;
+	}
+	nav .early.mobile {
+		display: block !important;
+		float: right;
+		margin-right: 12px;
+	}
+	
+	.second {
+		background-size: 30%;
+		padding-top: 48px;
+		padding-bottom: 96px;
+	}
+	.second h2, .third h2, .fourth h2, .fifth h2, .sixth h2, .seventh h2, .eighth h2 {
+		font-size: 24px;
+	}
+	.second p, .fourth p, .fifth p, .sixth p, .seventh p, .eighth p, .footer p {
+		font-size: 15px;
+	}
+	
+	.third {
+		padding-top: 48px;
+	}
+	.third h2 {
+		font-size: 18px;
+	}
+	.third .carousel-control img {
+		margin-top: -22px;
+		width: 12px;
+	}
+	.third .carousel-control.right {
+    	right: -24px;
+	}
+	.third .carousel-inner .item:nth-child(1) .col-xs-7 {
+		padding-top: 48px;
+	}
+	.third .carousel-inner .item:nth-child(2) .col-xs-7 {
+		padding-top: 48px;
+	}
+	.third .carousel-inner .item:nth-child(3) .col-xs-7 {
+		padding-top: 48px;
+	}
+	
+	.fourth {
+		padding-top: 48px;
+		padding-bottom: 48px;
+	}
+	.fourth .reasons .col-sm-6:first-child {
+		margin-bottom: 48px;
+	}
+	.fourth .reasons .col-sm-6:last-child {
+		padding-left: 15px;
+	}
+	
+	.fifth {
+		padding-top: 48px;
+		padding-bottom: 48px;
+	}
+	.fifth .image {
+		margin-bottom: 48px;
+	}
+	
+	.sixth {
+		padding-top: 48px;
+    	padding-bottom: 48px;
+	}
+	
+	.seventh {
+		padding-top: 48px;
+    	padding-bottom: 48px;
+	}
+	
+	.eighth {
+		padding-top: 48px;
+    	padding-bottom: 48px;
+	}
+}
+@media(max-width:479px) {
+	nav .navbar-brand, nav .early {
+		margin-left: 0px;
+	}
+	
+	.third h2 {
+		font-size: 15px;
+	}
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after,
+    *:first-letter,
+    *:first-line {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
